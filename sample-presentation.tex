@@ -1,0 +1,127 @@
+% IMPORTANT: To use the 'navigation' option correctly (to show all
+% sections in the sidebar), you must compile this document TWICE.
+% 1. The first pass collects all section names.
+% 2. The second pass displays them.
+% \documentclass[presentation]{beamer-template}
+\documentclass[navigation]{beamer-template}
+% Document setup
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Customize logo path (replace with your actual logo file)
+\renewcommand{\logopath}{logo.png}
+
+\title{Custom Beamer Template Demo}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% Slide 1: Introduction
+\FullSlide{Introduction}{Intro}{%
+  \begin{itemize}
+    \item Welcome to our custom Beamer presentation
+    \item This template uses a fixed 1920×1080 layout
+    \item Three distinct regions: title, content, and sidebar
+  \end{itemize}
+  
+  \vspace{1cm}
+  \textbf{Key Features:}
+  \begin{itemize}
+    \item Fixed dimensions and positioning
+    \item Section progress tracking
+    \item Custom color scheme
+    \item Logo integration
+  \end{itemize}
+}
+
+% Slide 2: Technical Overview
+\FullSlide{Technical Overview}{Intro}{%
+  \section*{Technical Specifications}
+  
+  \begin{description}
+    \item[Title Area:] 1600×180 px, positioned at (0,0)
+    \item[Content Area:] 1600×900 px, positioned at (0,180)
+    \item[Sidebar:] 320×1080 px, positioned at (1600,0)
+  \end{description}
+  
+  \vspace{0.5cm}
+  \textbf{Color Scheme:}
+  \begin{itemize}
+    \item Title background: \textcolor{blue}{\#015188}
+    \item Sidebar background: \textcolor{cyan}{\#00A7EF}
+    \item Content background: White
+  \end{itemize}
+  
+  \vspace{0.5cm}
+  \emph{The layout is implemented using TikZ with absolute positioning for pixel-perfect control.}
+}
+
+% Slide 3: Implementation Details
+\FullSlide{Implementation Details}{Advanced Implementation}{%
+  The template uses several key components:
+  
+  \begin{enumerate}
+    \item \textbf{Custom Class File:} \texttt{beamer-template.cls}
+    \item \textbf{TikZ Graphics:} For precise positioning and layout
+    \item \textbf{Section Tracking:} Dynamic sidebar updates
+    \item \textbf{Direct Content:} Passed as macro argument
+  \end{enumerate}
+  
+  \vspace{0.5cm}
+  \textbf{Usage Pattern:}
+  
+  \vspace{0.5cm}
+  \texttt{\textbackslash FullSlide\{Title\}\{Section ID\}\{\%}
+  
+  \texttt{\phantom{\textbackslash FullSlide\{Title\}\{Section ID\}\{}\% Your slide content here}
+  
+  \texttt{\}}
+}
+
+% Slide 4: Advanced Features
+\FullSlide{Advanced Features}{Features}{%
+  \textbf{Section Progress Tracking:}
+  \begin{itemize}
+    \item Only displayed sections appear in sidebar
+    \item Current section highlighted with white background
+    \item Previous sections shown with blue background
+  \end{itemize}
+  
+  \vspace{1cm}
+  \textbf{Logo Positioning:}
+  \begin{itemize}
+    \item Centered horizontally in sidebar
+    \item Positioned 300px from bottom
+  \end{itemize}
+  
+  \vspace{1cm}
+  \textbf{Customization:}
+  \begin{itemize}
+    \item Easy color modifications
+    \item Flexible content layouts
+    \item Logo replacement support
+  \end{itemize}
+}
+
+% Slide 5: Conclusion
+\FullSlide{Conclusion}{Conclusion}{%
+  \vspace{2cm}
+  \begin{center}
+    \Huge\textbf{Thank You!}
+  \end{center}
+  
+  \vspace{2cm}
+  \begin{center}
+    \Large Questions \& Discussion
+  \end{center}
+  
+  \vspace{1cm}
+  \begin{center}
+    This template provides precise control over layout \\
+    with consistent 1920×1080 positioning and \\
+    dynamic section tracking capabilities
+  \end{center}
+}
+
+\end{document}
