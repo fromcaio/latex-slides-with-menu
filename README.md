@@ -1,8 +1,8 @@
 # Custom LaTeX Beamer Presentation Template
 
-This project provides a custom LaTeX Beamer template for creating modern, clean presentations with a fixed 1920x1080 aspect ratio. The layout is built using TikZ for precise, pixel-perfect control over element positioning, creating a professional look with a title bar, a main content area, and a dynamic sidebar.
-
 ![Demo of the template](demo.gif)
+
+This project provides a custom LaTeX Beamer template for creating modern, clean presentations with a fixed 1920x1080 aspect ratio. The layout is built using TikZ for precise, pixel-perfect control over element positioning, creating a professional look with a title bar, a main content area, and a dynamic sidebar.
 
 ## Key Features
 
