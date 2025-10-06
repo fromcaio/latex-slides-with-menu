@@ -23,8 +23,10 @@
 \RequirePackage{xstring}
 
 % --- COLOR DEFINITIONS ---
-\definecolor{TitleBG}{HTML}{015188}
-\definecolor{SidebarBG}{HTML}{00A7EF}
+\definecolor{TitleBG}{HTML}{414867}
+% \definecolor{SidebarBG}{HTML}{9199BA}
+% \definecolor{SidebarBG}{HTML}{C1CAF4}
+\definecolor{SidebarBG}{HTML}{82869A}
 \definecolor{ContentBG}{HTML}{FFFFFF}
 
 % --- BEAMER DEFAULTS OVERRIDE ---
@@ -162,17 +164,20 @@
       
       % 1. Title Area (1600x180 px = 13.33x1.5 cm)
       \fill[TitleBG] (current page.north west) rectangle ++(13.33, -1.5);
+      % black text title
+      % \node[black, font=\Large\bfseries, text width=13cm, align=center] 
+        %  at ([xshift=6.665cm, yshift=-0.75cm]current page.north west) {#1};
+      % white text title
       \node[white, font=\Large\bfseries, text width=13cm, align=center] 
-           at ([xshift=6.665cm, yshift=-0.75cm]current page.north west) {#1};
-      
+         at ([xshift=6.665cm, yshift=-0.75cm]current page.north west) {#1};
       % 2. Content Area (1600x900 px = 13.33x7.5 cm)
       \fill[ContentBG] ([yshift=-1.5cm]current page.north west) rectangle ++(13.33, -7.5);
       
       % 3. Right Sidebar (320x1080 px = 2.67x9 cm)
       \begin{scope}[shift={([xshift=13.33cm]current page.north west)}]
         \fill[SidebarBG] (0, 0) rectangle (2.67, -9);
-        \node at (1.335, -0.75) {%
-          \includegraphics[width=2.2cm, height=1.8cm, keepaspectratio]{\logopath}%
+        \node at (1.335, -0.9) {%
+          \includegraphics[width=2.2cm, height=1.5cm, keepaspectratio]{\logopath}%
         };
         \begin{scope}[shift={(0, -2)}]
           \RenderSections{\currentsectionname}
